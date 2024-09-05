@@ -14,10 +14,15 @@ AI-ML enhancement: Designed for future integration with AI-ML techniques to impr
 ## Project Structure
 
 ├── app.py                  # Flask server for backend
+
 ├── classify_road.py        # Python module for road classification
+
 ├── templates
+
 │   └── map.html            # Frontend HTML for displaying map and coordinates
+
 ├── road_segments.csv       # Demo CSV file containing road segments data
+
 └── README.md               # Project documentation
 
 # Getting Started
@@ -37,9 +42,6 @@ Ensure you have the CSV file with road segments data:
 A sample CSV file named road_segments.csv is provided with the project.
 Running the Application
 Start the Flask server:
-
-bash
-Copy code
 python app.py
 Access the application:
 
