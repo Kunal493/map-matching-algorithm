@@ -24,6 +24,10 @@ AI-ML enhancement: Designed for future integration with AI-ML techniques to impr
 
 ├── road_segments.csv       # Demo CSV file containing road segments data
 
+├── SystemArchitecture.jpeg # SystemArchitecture image
+
+├── FlowChart.jpg           # FlowChart
+
 └── README.md               # Project documentation
 
 # Getting Started
