@@ -34,7 +34,7 @@ Basic knowledge of HTML, JavaScript, and Python
 
 ## Installation
 # Clone the repository:
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/Kunal493/map-matching-algorithm.git
 
 ## Install required Python packages:
 pip install flask
