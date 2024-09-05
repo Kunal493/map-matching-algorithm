@@ -1,4 +1,5 @@
 # Map-Matching Algorithm for Highway and Service Road Classification
+This is demo version only.
 
 ## Project Overview
 This project aims to develop a map-matching algorithm using AI-ML techniques to distinguish vehicular movement on highways and service roads. 
@@ -47,17 +48,8 @@ Access the application:
 
 Open a web browser and navigate to http://localhost:8000 to view the map and start tracking.
 Example CSV File
-The CSV file road_segments.csv contains sample road segments data used for classification. Here's the structure:
+The CSV file road_segments.csv contains sample road segments data used for classification.
 
-csv
-Copy code
-type,start_lat,start_lon,end_lat,end_lon
-highway,23.0205,72.5797,23.0300,72.5800
-service_road,23.0205,72.5797,23.0220,72.5785
-highway,23.0250,72.5900,23.0350,72.5920
-service_road,23.0280,72.5870,23.0300,72.5860
-highway,23.0180,72.5750,23.0280,72.5760
-service_road,23.0160,72.5740,23.0175,72.5745
 How It Works
 Frontend (HTML/JavaScript):
 
