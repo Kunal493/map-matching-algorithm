@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Tracking Demo</title>
+</head>
+<body>
+    <h1>Vehicle Tracking</h1>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <p id="status">Loading map...</p>
+
+    <script>
+        function initMap(latitude, longitude) {
+            const map = document.getElementById('map');
+            const mapURL = `https://www.google.com/maps?q=${latitude},${longitude}&z=15&output=embed`;
+            map.innerHTML = `<iframe width="100%" height="500" frameborder="0" style="border:0" 
+                             src="${mapURL}" allowfullscreen></iframe>`;
+        }
+
+        function sendCoordinates(latitude, longitude) {
+            fetch('/submit_coordinates', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ latitude, longitude })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('status').textContent = `Vehicle is on a ${data.road_type}`;
+            })
+            .catch(error => {
+                console.error('Error submitting coordinates:', error);
+                document.getElementById('status').textContent = "Error submitting coordinates.";
+            });
+        }
+
+        navigator.geolocation.watchPosition(
+            position => {
+                const { latitude, longitude } = position.coords;
+                initMap(latitude, longitude);
+                sendCoordinates(latitude, longitude);
+            },
+            error => {
+                console.error('Error retrieving location:', error);
+                document.getElementById('status').textContent = "Unable to retrieve location.";
+            },
+            {
+                enableHighAccuracy: true,
+                maximumAge: 0,
+                timeout: 5000
+            }
+        );
+    </script>
+</body>
+</html>
