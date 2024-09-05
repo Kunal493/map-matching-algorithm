@@ -77,3 +77,5 @@ Expanding the road segments data to cover more regions.
 Enhancing the frontend with more interactive and responsive map features.
 Contributing
 Contributions are welcome! Please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+
